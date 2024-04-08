@@ -11,56 +11,55 @@ body {
     line-height: 1.6;
     padding: 20px;
     background: linear-gradient(to right, #74ebd5, #acb6e5);
-    /* Creative background */
-
 }
 
-header,
-footer {
+header, footer {
     text-align: center;
     padding: 1rem;
     background: #004a69;
-    /* */
     color: #fff;
 }
 
 main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the sections horizontally */
+    gap: 20px;
     padding: 20px;
 }
 
-#About_me h2 {
-    color: rgb(0, 217, 156);
+.rounded-section {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px; /
+    margin: 200px; /* Adjusted to add space around the sections */
+    flex: 1; /* Allows the sections to grow and shrink */
+    min-width: 300px; /* Ensures a minimum width for responsiveness */
+    max-width: 80%; /* Prevents the section from filling the whole screen width */
+    margin: auto; /* Adds automatic margins to center the sections horizontally */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
 /* Responsive Image Styling */
-img {
+#About_me img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
-#About_me img {
-    width: 50%;
-    /* Adjust the width as needed */
-    height: auto;
-    /* This maintains the aspect ratio of the image */
-    display: block;
-    /* This ensures the image is centered if you use margin */
-    margin: 0 auto;
-    /* This centers the image horizontally */
-}
-
-/* Media Queries for Responsive Design */
 @media (min-width: 768px) {
-    .responsive-images {
-        display: flex;
-        justify-content: space-between;
+    .rounded-section {
+        flex-direction: column;
+        max-width: 20%; /* Adjust the max-width for desktop view */
     }
 
     img {
-        margin-bottom: 0;
-
+        max-width: 80%; /* Sets a max-width for images on desktop */
+        height: auto;
+        margin: 0 auto 20px; /* Center the image */
+        padding: 0 20px; /* Add padding to the image */
     }
 }
 
