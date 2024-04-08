@@ -27,6 +27,10 @@ main {
     padding: 20px;
 }
 
+#About_me h2 {
+    color: rgb(0, 217, 156);
+}
+
 /* Responsive Image Styling */
 img {
     max-width: 100%;
