@@ -28,10 +28,21 @@ main {
 
 /* Responsive Image Styling */
 img {
-    max-width: 1%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 10%;
+    /* Adjust the width as needed */
+    height: auto;
+    /* This maintains the aspect ratio of the image */
+    display: block;
+    /* This ensures the image is centered if you use margin */
+    margin: 0 auto;
+    /* This centers the image horizontally */
 }
 
 /* Media Queries for Responsive Design */
