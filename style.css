@@ -28,8 +28,8 @@ main {
 
 /* Responsive Image Styling */
 img {
-    max-width: 50%;
-    height: auto;
+    max-width: 1%;
+    height: 100%;
     display: block;
     margin-bottom: 20px;
 }
