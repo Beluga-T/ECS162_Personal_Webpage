@@ -12,7 +12,7 @@ body {
     padding: 20px;
     background: linear-gradient(to right, #74ebd5, #acb6e5);
     /* Creative background */
-    /* Creative background */
+
 }
 
 header,
@@ -36,7 +36,7 @@ img {
 }
 
 .profile-image {
-    width: 10%;
+    width: 50%;
     /* Adjust the width as needed */
     height: auto;
     /* This maintains the aspect ratio of the image */
@@ -55,7 +55,7 @@ img {
 
     img {
         margin-bottom: 0;
-        width: 500px;
+
     }
 }
 
