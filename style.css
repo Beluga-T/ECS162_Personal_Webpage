@@ -19,7 +19,8 @@ header,
 footer {
     text-align: center;
     padding: 1rem;
-    background: #333;   /* */
+    background: #004a69;
+    /* */
     color: #fff;
 }
 
@@ -39,7 +40,7 @@ img {
     margin-bottom: 20px;
 }
 
-.profile-image {
+#About_me img {
     width: 50%;
     /* Adjust the width as needed */
     height: auto;
