@@ -1,0 +1,50 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background: linear-gradient(to right, #74ebd5, #acb6e5); /* Creative background */
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Responsive Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .responsive-images {
+        display: flex;
+        justify-content: space-between;
+    }
+    img {
+        margin-bottom: 0;
+    }
+}
+
+/* Additional Creative CSS */
+a:hover {
+    color: #74ebd5;
+    text-decoration: underline;
+}
