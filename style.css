@@ -10,10 +10,12 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background: linear-gradient(to right, #74ebd5, #acb6e5); /* Creative background */
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    /* Creative background */
 }
 
-header, footer {
+header,
+footer {
     text-align: center;
     padding: 1rem;
     background: #333;
@@ -26,7 +28,7 @@ main {
 
 /* Responsive Image Styling */
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin-bottom: 20px;
@@ -38,6 +40,7 @@ img {
         display: flex;
         justify-content: space-between;
     }
+
     img {
         margin-bottom: 0;
     }
