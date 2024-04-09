@@ -32,7 +32,7 @@ main {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px; /
+    padding: 20px; 
     margin: 200px; /* Adjusted to add space around the sections */
     flex: 1; /* Allows the sections to grow and shrink */
     min-width: 300px; /* Ensures a minimum width for responsiveness */
