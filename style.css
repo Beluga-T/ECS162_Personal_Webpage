@@ -47,6 +47,9 @@ main {
     height: auto;
     display: block;
     margin: 0 auto 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
 }
 
 @media (min-width: 768px) {
@@ -59,7 +62,7 @@ main {
         max-width: 80%; /* Sets a max-width for images on desktop */
         height: auto;
         margin: 0 auto 20px; /* Center the image */
-        padding: 0 20px; /* Add padding to the image */
+        /* padding: 0 20px; Add padding to the image */
     }
 }
 
