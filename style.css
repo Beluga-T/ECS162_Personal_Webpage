@@ -61,6 +61,28 @@ main {
     /* adds subtle shadow */
 }
 
+/* Back to Top Button Styling */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #09edbc;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#back-to-top:hover {
+    opacity: 1;
+}
+
 @media (min-width: 768px) {
     .rounded-section {
         flex-direction: column;
