@@ -29,13 +29,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.rounded-section');
     let lastScrollTop = 0;
-    sections.forEach(section => {
-        section.classList.add('visible');
-        section.classList.remove('hidden');
+
+    sections.forEach(section => { //set section in window to be visible when first loaded
+        if (isInViewport(section)) {
+            section.classList.add('visible');
+            section.classList.remove('hidden');
+        }
     });
+
+    function isInViewport(element) { // Check if element is in viewport
+        const rect = element.getBoundingClientRect(); // Get the size of element and its position relative to the viewport
+        return (
+            rect.top < window.innerHeight && rect.bottom >= 0
+        );
+    }
     window.addEventListener('scroll', () => {
         let currentScroll = document.documentElement.scrollTop;
 
