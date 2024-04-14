@@ -10,7 +10,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    /* GitHub dark theme gradient */
+    background: linear-gradient(to right, #0D1117, #161B22);
     font-size: 16px;
 }
 
@@ -19,8 +20,12 @@ header,
 footer {
     text-align: center;
     padding: 1rem;
-    background: #004a69;
+    background: #21262D;
     color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin: 20px;
 }
 
 main {
@@ -39,16 +44,21 @@ main {
 }
 
 .rounded-section {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Translucent white for Gaussian-like effect */
+    backdrop-filter: blur(10px);
+    /* Gaussian blur */
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    /* Darker shadow for depth */
     padding: 20px;
     margin: 20px;
     width: 100%;
     box-sizing: border-box;
     flex: 1;
     min-width: 300px;
-    margin: 20px;
+    color: #C9D1D9;
+    /* Ensuring text is readable on darker backgrounds */
 }
 
 /* Responsive Image Styling */
@@ -59,8 +69,8 @@ main {
     margin: 0 auto 20px;
     border-radius: 15px;
     box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* adds subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Darker shadow for better effect */
 }
 
 /* Back to Top Button Styling */
@@ -72,10 +82,11 @@ main {
     height: 50px;
     border: none;
     border-radius: 25px;
-    background-color: #09edbc;
+    background-color: #238636;
+    /* GitHub green for branding consistency */
     color: white;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     font-size: 24px;
     opacity: 0.7;
     transition: opacity 0.3s;
@@ -87,9 +98,8 @@ main {
 
 @media (min-width: 768px) {
     .rounded-section {
-        /* Ensures that on larger screens each section doesn't grow too large or too small */
         max-width: calc(33.333% - 20px);
-        /* Ensures no more than three columns */
+        /* Adjust for three columns */
     }
 
     body {
@@ -99,7 +109,19 @@ main {
 }
 
 /* mouse hover effect */
+
 a:hover {
-    color: #74ebd5;
+    color: #1F6FEB;
+    /* Lighter blue for hover */
     text-decoration: underline;
+    /* Reintroduces underline on hover for emphasis */
+}
+
+a {
+    color: #58A6FF;
+    /* GitHub blue for regular link color */
+    text-decoration: none;
+    /* Optional: removes underline from links */
+    transition: color 0.3s ease;
+    /* Smooth color transition for hover effect */
 }
