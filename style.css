@@ -61,8 +61,23 @@ main {
     /* Ensuring text is readable on darker backgrounds */
 }
 
+.rounded-section p {
+    margin-bottom: 20px;
+}
+
 /* Responsive Image Styling */
 #About_me img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Darker shadow for better effect */
+}
+
+#My_interest img {
     max-width: 100%;
     height: auto;
     display: block;
