@@ -113,7 +113,6 @@ main {
     border: none;
     border-radius: 25px;
     background-color: #3FB950;
-    /* GitHub green for branding consistency */
     color: white;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
