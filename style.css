@@ -22,12 +22,20 @@ footer {
 }
 
 main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers the sections on the main axis */
+}
+
+.flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    /* Centers the sections horizontally */
-    gap: 20px;
-    padding: 20px;
+    /* Allows wrapping to next line if necessary */
+    justify-content: space-around;
+    /* Spacing around items */
+    width: 100%;
 }
 
 .rounded-section {
@@ -35,18 +43,16 @@ main {
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 200px;
-    /* Adjusted to add space around the sections */
-    flex: 1;
-    /* Allows the sections to grow and shrink */
-    min-width: 300px;
-    /* Ensures a minimum width for responsiveness */
-    max-width: 80%;
-    /* Prevents the section from filling the whole screen width */
-    margin: auto;
-    /* Adds automatic margins to center the sections horizontally */
+    margin: 20px;
+    width: 100%;
+    /* Full width on mobile */
     box-sizing: border-box;
-    /* Ensures padding and border are included in the width */
+    flex: 1;
+    /* Flex-grow to fill available space */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    margin: 20px;
+    /* Equal margin for spacing */
 }
 
 /* Responsive Image Styling */
@@ -85,9 +91,22 @@ main {
 
 @media (min-width: 768px) {
     .rounded-section {
-        flex-direction: column;
-        max-width: 20%;
-        /* Adjust the max-width for desktop view */
+        width: calc(50% - 40px);
+        /* Subtract the total margin space */
+        /* Optional max-width to prevent sections from growing too large */
+        max-width: 600px;
+    }
+
+    .flex-container {
+        flex-wrap: nowrap;
+        /* Prevent wrapping to ensure horizontal alignment */
+    }
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* Evenly distributes space around items */
     }
 
     img {
@@ -100,7 +119,7 @@ main {
     }
 }
 
-/* Additional Creative CSS */
+/* mouse hover effect */
 a:hover {
     color: #74ebd5;
     text-decoration: underline;
