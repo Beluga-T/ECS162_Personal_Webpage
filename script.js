@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
 
-            // log section current status flushing style changes
+            // DEBUG: log section current status flushing style changes
             console.log(section.id, section.classList.contains('visible') ? 'visible' : 'hidden');
 
         });

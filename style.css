@@ -126,44 +126,39 @@ main {
     opacity: 1;
 }
 
-@media (min-width: 1485px) {
-    .rounded-section {
-        max-width: calc(33.333% - 20px);
-        /* Adjust for three columns */
-    }
-
-    body {
-        font-size: 25px;
-        /* Larger font size for desktop */
-    }
-}
-
-/* mouse hover effect */
-
-a:hover {
-    color: #1F6FEB;
-    /* Lighter blue for hover */
-    text-decoration: underline;
-    /* Reintroduces underline on hover for emphasis */
-}
 
 a {
     color: #58A6FF;
-    /* GitHub blue for regular link color */
     text-decoration: none;
-    /* Optional: removes underline from links */
     transition: color 0.3s ease;
-    /* Smooth color transition for hover effect */
+}
+
+/* mouse hover effect on Link*/
+a:hover {
+    color: #1F6FEB;
+    text-decoration: underline;
 }
 
 
 
+/* responsive design */
+@media (min-width: 1485px) {
+    .rounded-section {
+        /* Adjust for three columns */
+        max-width: calc(33.333% - 20px);
+    }
+
+    body {
+        /* Larger font size for desktop */
+        font-size: 25px;
+
+    }
+}
 
 @keyframes slideIn {
     from {
         opacity: 0;
         transform: translateY(50px);
-        /* Start from below */
     }
 
     to {
@@ -180,8 +175,9 @@ a {
 
     to {
         opacity: 0;
-        transform: translateY(-50px);
         /* Move up */
+        transform: translateY(-50px);
+
     }
 }
 
@@ -195,8 +191,9 @@ a {
 .hidden {
     animation-name: slideOut;
     opacity: 0;
-    visibility: hidden;
     /* Ensures sections are not visible when not in view */
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    visibility: hidden;
     /* Delay visibility to after animation */
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+
 }
