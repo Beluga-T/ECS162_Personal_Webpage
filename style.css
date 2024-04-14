@@ -11,7 +11,9 @@ body {
     line-height: 1.6;
     padding: 20px;
     background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-size: 16px;
 }
+
 
 header,
 footer {
@@ -32,9 +34,7 @@ main {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    /* Allows wrapping to next line if necessary */
     justify-content: space-around;
-    /* Spacing around items */
     width: 100%;
 }
 
@@ -45,14 +45,10 @@ main {
     padding: 20px;
     margin: 20px;
     width: 100%;
-    /* Full width on mobile */
     box-sizing: border-box;
     flex: 1;
-    /* Flex-grow to fill available space */
     min-width: 300px;
-    /* Minimum width before wrapping */
     margin: 20px;
-    /* Equal margin for spacing */
 }
 
 /* Responsive Image Styling */
@@ -91,31 +87,14 @@ main {
 
 @media (min-width: 768px) {
     .rounded-section {
-        width: calc(50% - 40px);
-        /* Subtract the total margin space */
-        /* Optional max-width to prevent sections from growing too large */
-        max-width: 600px;
+        /* Ensures that on larger screens each section doesn't grow too large or too small */
+        max-width: calc(33.333% - 20px);
+        /* Ensures no more than three columns */
     }
 
-    .flex-container {
-        flex-wrap: nowrap;
-        /* Prevent wrapping to ensure horizontal alignment */
-    }
-
-    main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        /* Evenly distributes space around items */
-    }
-
-    img {
-        max-width: 80%;
-        /* Sets a max-width for images on desktop */
-        height: auto;
-        margin: 0 auto 20px;
-        /* Center the image */
-        /* padding: 0 20px; Add padding to the image */
+    body {
+        font-size: 25px;
+        /* Larger font size for desktop */
     }
 }
 
