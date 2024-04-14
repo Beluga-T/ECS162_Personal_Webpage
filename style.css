@@ -64,6 +64,8 @@ main {
     opacity: 0;
     /* Start sections as invisible to manage animation */
     transition: visibility 0s, opacity 0.5s linear;
+    /* smoother transition */
+    transition: box-shadow 0.3s;
 }
 
 .rounded-section p {
@@ -71,7 +73,7 @@ main {
 }
 
 /* Responsive Image Styling */
-#About_me img {
+.rounded-section img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -79,19 +81,27 @@ main {
     border-radius: 15px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    /* Darker shadow for better effect */
+    /* smoother transition */
+    transition: box-shadow 0.3s;
 }
 
 #My_interest img {
-    max-width: 100%;
-    height: auto;
-    display: block;
     margin: 0 auto 20px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    /* Darker shadow for better effect */
 }
+
+
+
+#About_me img:hover,
+#My_interest img:hover {
+    /* White glow effect */
+    box-shadow: 0 0 15px 5px #fff;
+
+}
+
+.rounded-section:hover {
+    box-shadow: 0 0 15px 5px #7C72FF;
+}
+
 
 /* Back to Top Button Styling */
 #back-to-top {
@@ -102,7 +112,7 @@ main {
     height: 50px;
     border: none;
     border-radius: 25px;
-    background-color: #238636;
+    background-color: #3FB950;
     /* GitHub green for branding consistency */
     color: white;
     cursor: pointer;
@@ -145,6 +155,9 @@ a {
     transition: color 0.3s ease;
     /* Smooth color transition for hover effect */
 }
+
+
+
 
 @keyframes slideIn {
     from {

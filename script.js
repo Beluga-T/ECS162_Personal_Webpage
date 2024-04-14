@@ -32,9 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.rounded-section');
     let lastScrollTop = 0;
-
+    sections.forEach(section => {
+        section.classList.add('visible');
+        section.classList.remove('hidden');
+    });
     window.addEventListener('scroll', () => {
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        let currentScroll = document.documentElement.scrollTop;
 
         sections.forEach(section => {
             if (isInViewport(section)) {
@@ -49,13 +52,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     section.classList.add('hidden');
                 }
             }
+
+            // log section current status flushing style changes
+            console.log(section.id, section.classList.contains('visible') ? 'visible' : 'hidden');
+
         });
 
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative values on mobile
     });
 
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
+    function isInViewport(element) { // Check if element is in viewport
+        const rect = element.getBoundingClientRect(); // Get the size of element and its position relative to the viewport
         return (
             rect.top < window.innerHeight && rect.bottom >= 0
         );
