@@ -40,7 +40,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .rounded-section {
@@ -53,12 +53,17 @@ main {
     /* Darker shadow for depth */
     padding: 20px;
     margin: 20px;
-    width: 100%;
+
     box-sizing: border-box;
     flex: 1;
     min-width: 300px;
     color: #C9D1D9;
     /* Ensuring text is readable on darker backgrounds */
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    opacity: 0;
+    /* Start sections as invisible to manage animation */
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .rounded-section p {
@@ -70,7 +75,7 @@ main {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 0px;
     border-radius: 15px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -111,7 +116,7 @@ main {
     opacity: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1485px) {
     .rounded-section {
         max-width: calc(33.333% - 20px);
         /* Adjust for three columns */
@@ -139,4 +144,46 @@ a {
     /* Optional: removes underline from links */
     transition: color 0.3s ease;
     /* Smooth color transition for hover effect */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        /* Start from below */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+        /* Move up */
+    }
+}
+
+.visible {
+    animation-name: slideIn;
+    opacity: 1;
+    /* Make sure sections are fully visible when in view */
+    visibility: visible;
+}
+
+.hidden {
+    animation-name: slideOut;
+    opacity: 0;
+    visibility: hidden;
+    /* Ensures sections are not visible when not in view */
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    /* Delay visibility to after animation */
 }
