@@ -73,12 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative values on mobile
     });
 
-    function isInViewport(element) { // Check if element is in viewport
-        const rect = element.getBoundingClientRect(); // Get the size of element and its position relative to the viewport
-        return (
-            rect.top < window.innerHeight && rect.bottom >= 0
-        );
-    }
 
     // Handle 'Back to Top' button
     document.getElementById('back-to-top').addEventListener('click', () => {
